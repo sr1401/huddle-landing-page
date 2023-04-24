@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+:root {
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--Violet);
+}
+
+body {
+    min-height: 100vh;
+    background-image: url(./images/bg-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.page {
+    padding: 65px 80px 40px;
+}
+
+.page__logo {
+    margin-bottom: 100px;
+}
+
+.page__body {
+    display: flex;
+}
+
+.page__body img {
+    min-width: 50vw;
+    min-height: 50vh;
+    margin-right: 100px;
+    flex: 50%;
+}
+
+.page__info {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 80px;
+    flex: 50%;
+}
+.info__heading {
+    font-size: 3.125em;
+    font-weight: 600;
+}
+
+.info__desc {
+    font-size: 1.25em;
+    margin: 20px 0 25px;
+}
+
+button {
+    width: 240px;
+    height: 65px;
+    font-size: 1.25em;
+    color: var(--Violet);
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0 0 10px #00000070;
+}
+
+button:hover {
+    background-color: var(--Soft-Magenta);
+    color: white;
+    cursor: pointer;
+}
+
+.page__contact {
+    display: flex;
+    float: right;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.icon__contact {
+    width: 40px;
+    height: 40px;
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 5px;
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon__contact:hover {
+    border-color: var(--Soft-Magenta);
+    cursor: pointer;
+}
+
+a {
+    display: flex;
+}
+
+.icon__contact a i {
+    color: white;
+    font-size: 1.25em;
+}
+
+.icon__contact a {
+    text-decoration: none;
+}
+
+.icon__contact:hover a i {
+    color: var(--Soft-Magenta);
+}
+
+
+
+@media (max-width: 740px) {
+    body {
+        background-image: url(./images/bg-mobile.svg);
+        background-size: contain;
+    }
+
+    .page__body {
+        flex-wrap: wrap;
+    }
+
+    .page__body img {
+        margin-right: 0;
+        flex: 100%;
+    }
+
+    .page__info {
+        flex: 100%;
+        text-align: center;
+    }
+
+    .page__contact {
+        float: none;
+        justify-content: center;
+        margin-top: 50px;
+    }
+}
